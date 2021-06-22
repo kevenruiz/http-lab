@@ -27,4 +27,13 @@ describe('app routes', () => {
 
   });
 
+  it('it gets color red from /green', async () => {
+
+    const res = await request(app).get('/green');
+    expect(res.text).toEqual('<h1>green<h1>');
+
+  });
+
+
+
 });
