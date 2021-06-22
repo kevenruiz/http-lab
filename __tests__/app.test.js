@@ -12,4 +12,12 @@ describe('app routes', () => {
 
   });
 
+  it('it gets a body from /echo', async () => {
+
+    const res = await request(app).post('/echo').send('something');
+    expect(res.text).toEqual('something');
+
+
+  });
+
 });
