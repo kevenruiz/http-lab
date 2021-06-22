@@ -20,4 +20,11 @@ describe('app routes', () => {
 
   });
 
+  it('it gets color red from /red', async () => {
+
+    const res = await request(app).get('/red');
+    expect(res.text).toEqual('<h1>red<h1>');
+
+  });
+
 });
